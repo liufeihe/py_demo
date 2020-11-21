@@ -1,0 +1,51 @@
+name: 储物货柜配置
+comment: 储物货柜
+type: shelf
+types: 
+  - a
+  - b
+  - c
+scene_tc_map:
+  10001: 12000
+  10002: 12000
+  10003: 12000
+  10004: 12000
+  10005: 12000
+  10006: 12000
+  10007: 12000
+  10008: 12000
+  10009: 12000
+  10010: 12000
+  10011: 12000
+  10012: 12000
+  10013: 12000
+  10014: 12000
+  10015: 12000
+list:
+  - id: 1
+    name: 储面柜
+    children:
+      - id: 1
+        name: 柜1
+        sceneId: 10001
+      - id: 2
+        name: 柜2
+        sceneId: 10002
+  - id: 2
+    name: 储青菜柜
+    children:
+      - id: 1
+        name: 柜1
+        sceneId: 10001
+      - id: 2
+        name: 柜2
+        sceneId: 10002
+  - id: 3
+    name: 面盒丢弃柜
+    children:
+      - id: 1
+        name: 柜1
+        sceneId: 10001
+      - id: 2
+        name: 柜2
+        sceneId: 10002

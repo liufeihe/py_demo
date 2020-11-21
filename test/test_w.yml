@@ -1,0 +1,7 @@
+list:
+- id: 1
+  tc: 4
+- id: 2
+  tc: 4
+name: 储物货柜配置
+run: true
