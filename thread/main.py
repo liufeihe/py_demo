@@ -4,6 +4,24 @@ from time import sleep
 time_count = 0
 thread_count = 0
 
+class OrderMgr:
+    def __init__(self, name):
+        self.name = name
+        self.count = 0
+        self.list = []
+    
+    def run(self):
+        while True:
+            self.count = self.count + 1
+            print("count, {0}".format(self.count))
+            self.list.append(self.count)
+            sleep(1)
+            
+    def get_list(self):
+        print('get_list')
+        return self.list
+
+
 def thread1_run(*args):
     global thread_count
     while True:
@@ -54,8 +72,25 @@ def test_threads():
     t2 = Thread(target=thread2_run)
     t2.start()
 
+om = None
+def get_order_list():
+    global om
+    print(om.get_list())
+
 def main():
-    test_threads()
+    global om
+    
+    om = OrderMgr('order')
+
+    # test_threads()
+    t = Timer(1, get_order_list)
+    t.start()
+
+    
+    t2 = Thread(target=om.run)
+    t2.start()
+
+    print('end')
 
 if __name__ == "__main__":
     main()
