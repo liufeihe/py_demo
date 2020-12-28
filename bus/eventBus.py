@@ -11,6 +11,7 @@ class EventBus:
     
     @classmethod
     def emit(cls, event_type, data=None):
+        print("emit {0}".format(event_type))
         events = cls.events_map.get(event_type)
         if events is not None:
             for _, cb in enumerate(events):

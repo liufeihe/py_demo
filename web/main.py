@@ -1,26 +1,30 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
+from threading import Thread
 import tornado.ioloop
 import tornado.web
-from schedular import get_schedular
+from schedule.schedular import init_schedular, add_order
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
+        print('get')
         self.write("hello world")
-        s = get_schedular()
-        print(s)
 
     def post(self, p=None):
-        print(p)
+        print('post, {0}'.format(p))
         self.write({'data': 1})
 
 def make_app():
     return tornado.web.Application([
-        (r"/job/?(list|)", MainHandler)
+        (r"/order/?(list|)", MainHandler)
     ])
 
 def main():
+    schedular = init_schedular()
+    t1 = Thread(target=schedular.run)
+    t1.start()
+
     app = make_app()
     port = 8091
     app.listen(port)
