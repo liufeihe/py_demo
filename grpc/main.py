@@ -16,7 +16,7 @@ def print_io(io_type, ios):
 def run():
     num = 0
     print('create channel')
-    channel = grpc.insecure_channel('192.168.3.65:5181')
+    channel = grpc.insecure_channel('192.168.3.227:5181')
     rcs = rcs_pb2_grpc.RobotControllerStub(channel)
     print('send request')
     # res = rcs.GetJointTemp(rcs_pb2.IntRequest(index=1))
