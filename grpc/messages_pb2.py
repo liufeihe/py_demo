@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='robotc',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0emessages.proto\x12\x06robotc\"-\n\nCoordinate\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"+\n\x08Rotation\x12\t\n\x01r\x18\x01 \x01(\x01\x12\t\n\x01p\x18\x02 \x01(\x01\x12\t\n\x01y\x18\x03 \x01(\x01\"N\n\x02PR\x12$\n\x08position\x18\x01 \x01(\x0b\x32\x12.robotc.Coordinate\x12\"\n\x08rotation\x18\x02 \x01(\x0b\x32\x10.robotc.Rotation\"\x17\n\x05JPose\x12\x0e\n\x06joints\x18\x01 \x03(\x01\"8\n\x07Payload\x12\x0c\n\x04mass\x18\x01 \x01(\x01\x12\x1f\n\x03\x63og\x18\x02 \x01(\x0b\x32\x12.robotc.Coordinate\"\x1b\n\x0bPayloadMass\x12\x0c\n\x04mass\x18\x01 \x01(\x01\"-\n\nPayloadCog\x12\x1f\n\x03\x63og\x18\x01 \x01(\x0b\x32\x12.robotc.Coordinate\"\x14\n\x05IOPin\x12\x0b\n\x03pin\x18\x01 \x01(\x05\"!\n\x03\x44IO\x12\x0b\n\x03pin\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x05\"/\n\x03\x41IO\x12\x0b\n\x03pin\x18\x01 \x01(\x05\x12\x0c\n\x04mode\x18\x02 \x01(\x05\x12\r\n\x05value\x18\x03 \x01(\x01\"2\n\x15ModbusExternalIOState\x12\n\n\x02id\x18\x01 \x01(\x05\x12\r\n\x05state\x18\x02 \x01(\x05\"\xfe\x01\n\x02IO\x12\x1f\n\nrobotDIOIn\x18\x01 \x03(\x0b\x32\x0b.robotc.DIO\x12 \n\x0brobotDIOOut\x18\x02 \x03(\x0b\x32\x0b.robotc.DIO\x12\x1f\n\nrobotAIOIn\x18\x03 \x03(\x0b\x32\x0b.robotc.AIO\x12 \n\x0brobotAIOOut\x18\x04 \x03(\x0b\x32\x0b.robotc.AIO\x12\x1d\n\x08tcpDIOIn\x18\x05 \x03(\x0b\x32\x0b.robotc.DIO\x12\x1e\n\ttcpDIOOut\x18\x06 \x03(\x0b\x32\x0b.robotc.DIO\x12\x33\n\x0c\x65xtIODevices\x18\x07 \x03(\x0b\x32\x1d.robotc.ModbusExternalIOState\"=\n\x08Hardware\x12\r\n\x05model\x18\x01 \x01(\t\x12\n\n\x02sn\x18\x02 \x01(\t\x12\x16\n\x0e\x64river_version\x18\x03 \x01(\t\"\xa1\x02\n\tRobotInfo\x12\x1f\n\x05robot\x18\x01 \x01(\x0b\x32\x10.robotc.Hardware\x12 \n\x06\x66lange\x18\x02 \x01(\x0b\x32\x10.robotc.Hardware\x12\x1d\n\x03led\x18\x03 \x01(\x0b\x32\x10.robotc.Hardware\x12 \n\x06joints\x18\x04 \x03(\x0b\x32\x10.robotc.Hardware\x12\x11\n\trcVersion\x18\x05 \x01(\t\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\"\n\x08\x63omboard\x18\x07 \x01(\x0b\x32\x10.robotc.Hardware\x12\x0b\n\x03mac\x18\x08 \x01(\t\x12\x1d\n\x03\x61rm\x18\t \x01(\x0b\x32\x10.robotc.Hardware\x12\x0e\n\x06\x61ppTag\x18\n \x01(\t\x12\x0f\n\x07typeTag\x18\x0b \x01(\t\"A\n\nDeviceInfo\x12!\n\x07\x64\x65vInfo\x18\x01 \x01(\x0b\x32\x10.robotc.Hardware\x12\x10\n\x08\x64\x65v_type\x18\x02 \x01(\x05*[\n\x08LuaState\x12\x08\n\x04IDLE\x10\x00\x12\x0b\n\x07RUNNING\x10\x01\x12\n\n\x06PAUSED\x10\x02\x12\x0b\n\x07\x41\x42ORTED\x10\x03\x12\x0b\n\x07STOPPED\x10\x04\x12\t\n\x05\x42\x45GIN\x10\x05\x12\x07\n\x03\x45ND\x10\x06\x62\x06proto3')
+  serialized_pb=_b('\n\x0emessages.proto\x12\x06robotc\"\x17\n\x08Response\x12\x0b\n\x03ret\x18\x01 \x01(\x05\"-\n\nCoordinate\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"+\n\x08Rotation\x12\t\n\x01r\x18\x01 \x01(\x01\x12\t\n\x01p\x18\x02 \x01(\x01\x12\t\n\x01y\x18\x03 \x01(\x01\"N\n\x02PR\x12$\n\x08position\x18\x01 \x01(\x0b\x32\x12.robotc.Coordinate\x12\"\n\x08rotation\x18\x02 \x01(\x0b\x32\x10.robotc.Rotation\"\x17\n\x05JPose\x12\x0e\n\x06joints\x18\x01 \x03(\x01\"8\n\x07Payload\x12\x0c\n\x04mass\x18\x01 \x01(\x01\x12\x1f\n\x03\x63og\x18\x02 \x01(\x0b\x32\x12.robotc.Coordinate\"\x1b\n\x0bPayloadMass\x12\x0c\n\x04mass\x18\x01 \x01(\x01\"-\n\nPayloadCog\x12\x1f\n\x03\x63og\x18\x01 \x01(\x0b\x32\x12.robotc.Coordinate\"\x14\n\x05IOPin\x12\x0b\n\x03pin\x18\x01 \x01(\x05\"!\n\x03\x44IO\x12\x0b\n\x03pin\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x05\"/\n\x03\x41IO\x12\x0b\n\x03pin\x18\x01 \x01(\x05\x12\x0c\n\x04mode\x18\x02 \x01(\x05\x12\r\n\x05value\x18\x03 \x01(\x01\"2\n\x15ModbusExternalIOState\x12\n\n\x02id\x18\x01 \x01(\x05\x12\r\n\x05state\x18\x02 \x01(\x05\"\xfe\x01\n\x02IO\x12\x1f\n\nrobotDIOIn\x18\x01 \x03(\x0b\x32\x0b.robotc.DIO\x12 \n\x0brobotDIOOut\x18\x02 \x03(\x0b\x32\x0b.robotc.DIO\x12\x1f\n\nrobotAIOIn\x18\x03 \x03(\x0b\x32\x0b.robotc.AIO\x12 \n\x0brobotAIOOut\x18\x04 \x03(\x0b\x32\x0b.robotc.AIO\x12\x1d\n\x08tcpDIOIn\x18\x05 \x03(\x0b\x32\x0b.robotc.DIO\x12\x1e\n\ttcpDIOOut\x18\x06 \x03(\x0b\x32\x0b.robotc.DIO\x12\x33\n\x0c\x65xtIODevices\x18\x07 \x03(\x0b\x32\x1d.robotc.ModbusExternalIOState\"=\n\x08Hardware\x12\r\n\x05model\x18\x01 \x01(\t\x12\n\n\x02sn\x18\x02 \x01(\t\x12\x16\n\x0e\x64river_version\x18\x03 \x01(\t\"\xa1\x02\n\tRobotInfo\x12\x1f\n\x05robot\x18\x01 \x01(\x0b\x32\x10.robotc.Hardware\x12 \n\x06\x66lange\x18\x02 \x01(\x0b\x32\x10.robotc.Hardware\x12\x1d\n\x03led\x18\x03 \x01(\x0b\x32\x10.robotc.Hardware\x12 \n\x06joints\x18\x04 \x03(\x0b\x32\x10.robotc.Hardware\x12\x11\n\trcVersion\x18\x05 \x01(\t\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\"\n\x08\x63omboard\x18\x07 \x01(\x0b\x32\x10.robotc.Hardware\x12\x0b\n\x03mac\x18\x08 \x01(\t\x12\x1d\n\x03\x61rm\x18\t \x01(\x0b\x32\x10.robotc.Hardware\x12\x0e\n\x06\x61ppTag\x18\n \x01(\t\x12\x0f\n\x07typeTag\x18\x0b \x01(\t\"A\n\nDeviceInfo\x12!\n\x07\x64\x65vInfo\x18\x01 \x01(\x0b\x32\x10.robotc.Hardware\x12\x10\n\x08\x64\x65v_type\x18\x02 \x01(\x05*[\n\x08LuaState\x12\x08\n\x04IDLE\x10\x00\x12\x0b\n\x07RUNNING\x10\x01\x12\n\n\x06PAUSED\x10\x02\x12\x0b\n\x07\x41\x42ORTED\x10\x03\x12\x0b\n\x07STOPPED\x10\x04\x12\t\n\x05\x42\x45GIN\x10\x05\x12\x07\n\x03\x45ND\x10\x06\x62\x06proto3')
 )
 
 _LUASTATE = _descriptor.EnumDescriptor(
@@ -60,8 +60,8 @@ _LUASTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1194,
-  serialized_end=1285,
+  serialized_start=1219,
+  serialized_end=1310,
 )
 _sym_db.RegisterEnumDescriptor(_LUASTATE)
 
@@ -74,6 +74,37 @@ STOPPED = 4
 BEGIN = 5
 END = 6
 
+
+
+_RESPONSE = _descriptor.Descriptor(
+  name='Response',
+  full_name='robotc.Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ret', full_name='robotc.Response.ret', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=26,
+  serialized_end=49,
+)
 
 
 _COORDINATE = _descriptor.Descriptor(
@@ -116,8 +147,8 @@ _COORDINATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26,
-  serialized_end=71,
+  serialized_start=51,
+  serialized_end=96,
 )
 
 
@@ -161,8 +192,8 @@ _ROTATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=73,
-  serialized_end=116,
+  serialized_start=98,
+  serialized_end=141,
 )
 
 
@@ -199,8 +230,8 @@ _PR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=118,
-  serialized_end=196,
+  serialized_start=143,
+  serialized_end=221,
 )
 
 
@@ -230,8 +261,8 @@ _JPOSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=198,
-  serialized_end=221,
+  serialized_start=223,
+  serialized_end=246,
 )
 
 
@@ -268,8 +299,8 @@ _PAYLOAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=223,
-  serialized_end=279,
+  serialized_start=248,
+  serialized_end=304,
 )
 
 
@@ -299,8 +330,8 @@ _PAYLOADMASS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=281,
-  serialized_end=308,
+  serialized_start=306,
+  serialized_end=333,
 )
 
 
@@ -330,8 +361,8 @@ _PAYLOADCOG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=310,
-  serialized_end=355,
+  serialized_start=335,
+  serialized_end=380,
 )
 
 
@@ -361,8 +392,8 @@ _IOPIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=357,
-  serialized_end=377,
+  serialized_start=382,
+  serialized_end=402,
 )
 
 
@@ -399,8 +430,8 @@ _DIO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=379,
-  serialized_end=412,
+  serialized_start=404,
+  serialized_end=437,
 )
 
 
@@ -444,8 +475,8 @@ _AIO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=414,
-  serialized_end=461,
+  serialized_start=439,
+  serialized_end=486,
 )
 
 
@@ -482,8 +513,8 @@ _MODBUSEXTERNALIOSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=463,
-  serialized_end=513,
+  serialized_start=488,
+  serialized_end=538,
 )
 
 
@@ -555,8 +586,8 @@ _IO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=516,
-  serialized_end=770,
+  serialized_start=541,
+  serialized_end=795,
 )
 
 
@@ -600,8 +631,8 @@ _HARDWARE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=772,
-  serialized_end=833,
+  serialized_start=797,
+  serialized_end=858,
 )
 
 
@@ -701,8 +732,8 @@ _ROBOTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=836,
-  serialized_end=1125,
+  serialized_start=861,
+  serialized_end=1150,
 )
 
 
@@ -739,8 +770,8 @@ _DEVICEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1127,
-  serialized_end=1192,
+  serialized_start=1152,
+  serialized_end=1217,
 )
 
 _PR.fields_by_name['position'].message_type = _COORDINATE
@@ -761,6 +792,7 @@ _ROBOTINFO.fields_by_name['joints'].message_type = _HARDWARE
 _ROBOTINFO.fields_by_name['comboard'].message_type = _HARDWARE
 _ROBOTINFO.fields_by_name['arm'].message_type = _HARDWARE
 _DEVICEINFO.fields_by_name['devInfo'].message_type = _HARDWARE
+DESCRIPTOR.message_types_by_name['Response'] = _RESPONSE
 DESCRIPTOR.message_types_by_name['Coordinate'] = _COORDINATE
 DESCRIPTOR.message_types_by_name['Rotation'] = _ROTATION
 DESCRIPTOR.message_types_by_name['PR'] = _PR
@@ -778,6 +810,13 @@ DESCRIPTOR.message_types_by_name['RobotInfo'] = _ROBOTINFO
 DESCRIPTOR.message_types_by_name['DeviceInfo'] = _DEVICEINFO
 DESCRIPTOR.enum_types_by_name['LuaState'] = _LUASTATE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Message,), dict(
+  DESCRIPTOR = _RESPONSE,
+  __module__ = 'messages_pb2'
+  # @@protoc_insertion_point(class_scope:robotc.Response)
+  ))
+_sym_db.RegisterMessage(Response)
 
 Coordinate = _reflection.GeneratedProtocolMessageType('Coordinate', (_message.Message,), dict(
   DESCRIPTOR = _COORDINATE,

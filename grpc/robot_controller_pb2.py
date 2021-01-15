@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='robotc',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x16robot_controller.proto\x12\x06robotc\x1a\x1bgoogle/protobuf/empty.proto\x1a\x0emessages.proto\"\xf8\x04\n\tRobotData\x12$\n\trobotMode\x18\x01 \x01(\x0b\x32\x11.robotc.RobotMode\x12%\n\njointModes\x18\x02 \x03(\x0b\x32\x11.robotc.JointMode\x12\"\n\x0b\x61\x63tualJoint\x18\x03 \x01(\x0b\x32\r.robotc.Joint\x12\'\n\x10\x61\x63tualJointSpeed\x18\x04 \x01(\x0b\x32\r.robotc.Joint\x12\"\n\x0btargetJoint\x18\x05 \x01(\x0b\x32\r.robotc.Joint\x12\'\n\x10targetJointSpeed\x18\x06 \x01(\x0b\x32\r.robotc.Joint\x12%\n\ractualTcpPose\x18\x07 \x01(\x0b\x32\x0e.robotc.Vector\x12&\n\x0e\x61\x63tualTcpSpeed\x18\x08 \x01(\x0b\x32\x0e.robotc.Vector\x12%\n\rtargetTcpPose\x18\t \x01(\x0b\x32\x0e.robotc.Vector\x12&\n\x0etargetTcpSpeed\x18\n \x01(\x0b\x32\x0e.robotc.Vector\x12%\n\ncurrentCmd\x18\x0b \x01(\x0b\x32\x11.robotc.CmdStatus\x12\x16\n\x02io\x18\x0c \x01(\x0b\x32\n.robotc.IO\x12\x16\n\x0evelocityFactor\x18\r \x01(\x01\x12\"\n\x08\x63lawInfo\x18\x0e \x01(\x0b\x32\x10.robotc.ClawInfo\x12!\n\njointTemps\x18\x0f \x01(\x0b\x32\r.robotc.Joint\x12#\n\x0ctargetTorque\x18\x10 \x01(\x0b\x32\r.robotc.Joint\x12#\n\x0c\x61\x63tualTorque\x18\x11 \x01(\x0b\x32\r.robotc.Joint\"\x0e\n\x0cRobotDataCmd\"\x87\x02\n\x0eRobotBriefData\x12$\n\trobotMode\x18\x01 \x01(\x0b\x32\x11.robotc.RobotMode\x12\"\n\x0b\x61\x63tualJoint\x18\x02 \x01(\x0b\x32\r.robotc.Joint\x12\"\n\x0btargetJoint\x18\x03 \x01(\x0b\x32\r.robotc.Joint\x12%\n\ractualTcpPose\x18\x04 \x01(\x0b\x32\x0e.robotc.Vector\x12%\n\rtargetTcpPose\x18\x05 \x01(\x0b\x32\x0e.robotc.Vector\x12\x16\n\x0evelocityFactor\x18\x06 \x01(\x01\x12!\n\njointTemps\x18\x07 \x01(\x0b\x32\r.robotc.Joint\"\x19\n\tRobotMode\x12\x0c\n\x04mode\x18\x01 \x01(\x05\"8\n\x02\x44H\x12\t\n\x01\x64\x18\x01 \x01(\x01\x12\t\n\x01\x61\x18\x02 \x01(\x01\x12\r\n\x05\x61lpha\x18\x03 \x01(\x01\x12\r\n\x05theta\x18\x04 \x01(\x01\"\'\n\x07KDParam\x12\x1c\n\x08\x64hParams\x18\x01 \x03(\x0b\x32\n.robotc.DH\"\x19\n\tJointMode\x12\x0c\n\x04mode\x18\x01 \x01(\x05\"\x1e\n\tAmplitude\x12\x11\n\tamplitude\x18\x01 \x01(\x01\"\x19\n\x06HoldOn\x12\x0f\n\x07hold_on\x18\x01 \x01(\x05\"\x16\n\x05\x46orce\x12\r\n\x05\x66orce\x18\x01 \x01(\x01\"\x18\n\x06Weight\x12\x0e\n\x06weight\x18\x01 \x01(\x01\"M\n\x08\x43lawInfo\x12\x11\n\tamplitude\x18\x01 \x01(\x01\x12\r\n\x05\x66orce\x18\x02 \x01(\x01\x12\x0e\n\x06weight\x18\x03 \x01(\x01\x12\x0f\n\x07hold_on\x18\x04 \x01(\x05\"\"\n\x0b\x46orceTorque\x12\x13\n\x0b\x66orceTorque\x18\x01 \x03(\x01\"\x17\n\x05Joint\x12\x0e\n\x06joints\x18\x01 \x03(\x01\"\x18\n\x06Vector\x12\x0e\n\x06vector\x18\x01 \x03(\x01\"\x1d\n\x0bTemperature\x12\x0e\n\x06\x64\x65gree\x18\x01 \x01(\x01\"\x1a\n\x07\x43urrent\x12\x0f\n\x07\x63urrent\x18\x01 \x01(\x01\"\x17\n\x06\x46\x61\x63tor\x12\r\n\x05value\x18\x01 \x01(\x01\"\x12\n\x03Ret\x12\x0b\n\x03ret\x18\x01 \x01(\x08\"\x13\n\x05\x43mdId\x12\n\n\x02id\x18\x01 \x01(\x05\"&\n\tCmdStatus\x12\n\n\x02id\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x05\"\x1b\n\nIntRequest\x12\r\n\x05index\x18\x01 \x01(\x05\" \n\x04Logs\x12\x18\n\x03log\x18\x01 \x03(\x0b\x32\x0b.robotc.Log\"/\n\x03Log\x12\r\n\x05level\x18\x01 \x01(\x05\x12\x0c\n\x04\x63ode\x18\x02 \x01(\x05\x12\x0b\n\x03msg\x18\x03 \x01(\t\"\x1c\n\x0cSleepRequest\x12\x0c\n\x04time\x18\x01 \x01(\x05\"H\n\rSpeedJRequest\x12\x13\n\x0bjoint_speed\x18\x01 \x03(\x01\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x02 \x01(\x01\x12\x0c\n\x04time\x18\x03 \x01(\x01\"d\n\rSpeedLRequest\x12\x10\n\x08velocity\x18\x01 \x03(\x01\x12\x1d\n\x15position_acceleration\x18\x02 \x01(\x01\x12\x0c\n\x04time\x18\x03 \x01(\x01\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x04 \x01(\x01\"$\n\x0cStopJRequest\x12\x14\n\x0c\x64\x65\x63\x65leration\x18\x01 \x01(\x01\"C\n\x0cStopLRequest\x12\x1d\n\x15position_deceleration\x18\x01 \x01(\x01\x12\x14\n\x0c\x64\x65\x63\x65leration\x18\x02 \x01(\x01\"\xdf\x01\n\x0cMoveCRequest\x12\x10\n\x08pose_via\x18\x01 \x03(\x01\x12\x0f\n\x07pose_to\x18\x02 \x03(\x01\x12\x19\n\x11pose_via_is_joint\x18\x03 \x01(\x08\x12\x18\n\x10pose_to_is_joint\x18\x04 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x05 \x01(\x01\x12\x10\n\x08velocity\x18\x06 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x07 \x01(\x01\x12\x0c\n\x04mode\x18\x08 \x01(\x05\x12\x0c\n\x04time\x18\t \x01(\x01\x12\x1d\n\tpose_base\x18\n \x01(\x0b\x32\n.robotc.PR\"\xad\x01\n\x0cMoveJRequest\x12\x15\n\rjoint_pose_to\x18\x01 \x03(\x01\x12\x1b\n\x13pose_is_joint_angle\x18\x02 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x0c\n\x04time\x18\x05 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x06 \x01(\x01\x12\x1d\n\tpose_base\x18\x07 \x01(\x0b\x32\n.robotc.PR\"\xa7\x01\n\x0cMoveLRequest\x12\x0f\n\x07pose_to\x18\x01 \x03(\x01\x12\x1b\n\x13pose_is_joint_angle\x18\x02 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x0c\n\x04time\x18\x05 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x06 \x01(\x01\x12\x1d\n\tpose_base\x18\x07 \x01(\x0b\x32\n.robotc.PR\"n\n\x0fMoveLRPYRequest\x12\x0f\n\x07pose_to\x18\x01 \x03(\x01\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x02 \x01(\x01\x12\x10\n\x08velocity\x18\x03 \x01(\x01\x12\x0c\n\x04time\x18\x04 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x05 \x01(\x01\"z\n\x0cMovePRequest\x12\x0f\n\x07pose_to\x18\x01 \x03(\x01\x12\x1b\n\x13pose_is_joint_angle\x18\x02 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x05 \x01(\x01\"{\n\rServoCRequest\x12\x0f\n\x07pose_to\x18\x01 \x03(\x01\x12\x1b\n\x13pose_is_joint_angle\x18\x02 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x05 \x01(\x01\"\xa0\x01\n\rServoJRequest\x12\x15\n\rjoint_pose_to\x18\x01 \x03(\x01\x12\x1b\n\x13pose_is_joint_angle\x18\x02 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x0c\n\x04time\x18\x05 \x01(\x01\x12\x17\n\x0flook_ahead_time\x18\x06 \x01(\x01\x12\x0c\n\x04gain\x18\x07 \x01(\x05\"_\n\nFineTuning\x12\x0c\n\x04mode\x18\x01 \x01(\x05\x12\x0c\n\x04\x62\x61se\x18\x02 \x01(\x05\x12\x12\n\ncoordinate\x18\x03 \x01(\x05\x12\x0e\n\x06target\x18\x04 \x01(\x05\x12\x11\n\tdirection\x18\x05 \x01(\x05\"7\n\tLEDStatus\x12\x0c\n\x04mode\x18\x01 \x01(\x05\x12\r\n\x05speed\x18\x02 \x01(\x05\x12\r\n\x05\x63olor\x18\x03 \x03(\x05\",\n\x0bVoiceStatus\x12\r\n\x05voice\x18\x01 \x01(\x05\x12\x0e\n\x06volume\x18\x02 \x01(\x05\"\x18\n\tFanStatus\x12\x0b\n\x03\x66\x61n\x18\x01 \x01(\x05\":\n\x0c\x43\x61lcTcpParam\x12\x1d\n\x05poses\x18\x01 \x03(\x0b\x32\x0e.robotc.Vector\x12\x0b\n\x03tol\x18\x02 \x01(\x01\"o\n\tLuaStatus\x12\x1f\n\x05state\x18\x01 \x01(\x0e\x32\x10.robotc.LuaState\x12\x1d\n\tlast_pose\x18\x02 \x01(\x0b\x32\n.robotc.PR\x12\"\n\x0blast_joints\x18\x03 \x01(\x0b\x32\r.robotc.JPose\"p\n\nLampStatus\x12\x1e\n\x03led\x18\x01 \x01(\x0b\x32\x11.robotc.LEDStatus\x12\"\n\x05voice\x18\x02 \x01(\x0b\x32\x13.robotc.VoiceStatus\x12\x1e\n\x03\x66\x61n\x18\x03 \x01(\x0b\x32\x11.robotc.FanStatus\"B\n\x0bPVATRequest\x12\x10\n\x08\x64uration\x18\x01 \x01(\x01\x12\t\n\x01q\x18\x02 \x03(\x01\x12\t\n\x01v\x18\x03 \x03(\x01\x12\x0b\n\x03\x61\x63\x63\x18\x04 \x03(\x01\"I\n\x0b\x45xternalDIO\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x17\n\x02io\x18\x02 \x01(\x0b\x32\x0b.robotc.DIO\x12\t\n\x01n\x18\x03 \x01(\r\x12\n\n\x02ok\x18\x04 \x01(\x08\"I\n\x0b\x45xternalAIO\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x17\n\x02io\x18\x02 \x01(\x0b\x32\x0b.robotc.AIO\x12\t\n\x01n\x18\x03 \x01(\r\x12\n\n\x02ok\x18\x04 \x01(\x08\"@\n\x0c\x45xternalDIOs\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x18\n\x03ios\x18\x02 \x03(\x0b\x32\x0b.robotc.DIO\x12\n\n\x02ok\x18\x04 \x01(\x08\"@\n\x0c\x45xternalAIOs\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x18\n\x03ios\x18\x02 \x03(\x0b\x32\x0b.robotc.AIO\x12\n\n\x02ok\x18\x04 \x01(\x08\"\x1c\n\x0e\x45xternalDevice\x12\n\n\x02id\x18\x01 \x01(\x05\"\x8d\x01\n\x0b\x45xternalIOs\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x18\n\x03\x64is\x18\x02 \x03(\x0b\x32\x0b.robotc.DIO\x12\x18\n\x03\x64os\x18\x03 \x03(\x0b\x32\x0b.robotc.DIO\x12\x18\n\x03\x61is\x18\x04 \x03(\x0b\x32\x0b.robotc.AIO\x12\x18\n\x03\x61os\x18\x05 \x03(\x0b\x32\x0b.robotc.AIO\x12\n\n\x02ok\x18\x06 \x01(\x08\x32\xde*\n\x0fRobotController\x12\x32\n\tPowerDown\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12,\n\x05Sleep\x12\x14.robotc.SleepRequest\x1a\r.robotc.CmdId\x12-\n\x04Sync\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x32\n\tTeachMode\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x35\n\x0c\x45ndTeachMode\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x32\n\x11SetVelocityFactor\x12\x0e.robotc.Factor\x1a\r.robotc.CmdId\x12;\n\x11GetVelocityFactor\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Factor\x12/\n\nSetGravity\x12\x12.robotc.Coordinate\x1a\r.robotc.CmdId\x12\x38\n\nGetGravity\x12\x16.google.protobuf.Empty\x1a\x12.robotc.Coordinate\x12,\n\nSetPayload\x12\x0f.robotc.Payload\x1a\r.robotc.CmdId\x12\x35\n\nGetPayload\x12\x16.google.protobuf.Empty\x1a\x0f.robotc.Payload\x12\x34\n\x0eSetPayloadMass\x12\x13.robotc.PayloadMass\x1a\r.robotc.CmdId\x12=\n\x0eGetPayloadMass\x12\x16.google.protobuf.Empty\x1a\x13.robotc.PayloadMass\x12\x32\n\rSetPayloadCog\x12\x12.robotc.PayloadCog\x1a\r.robotc.CmdId\x12;\n\rGetPayloadCog\x12\x16.google.protobuf.Empty\x1a\x12.robotc.PayloadCog\x12#\n\x06SetTcp\x12\n.robotc.PR\x1a\r.robotc.CmdId\x12,\n\x06GetTcp\x12\x16.google.protobuf.Empty\x1a\n.robotc.PR\x12\x34\n\x10SetClawAmplitude\x12\x11.robotc.Amplitude\x1a\r.robotc.CmdId\x12=\n\x10GetClawAmplitude\x12\x16.google.protobuf.Empty\x1a\x11.robotc.Amplitude\x12\x37\n\rGetClawHoldOn\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.HoldOn\x12,\n\x0cSetClawForce\x12\r.robotc.Force\x1a\r.robotc.CmdId\x12\x37\n\rGetClawWeight\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Weight\x12:\n\x0bGetTcpForce\x12\x16.google.protobuf.Empty\x1a\x13.robotc.ForceTorque\x12&\n\x06SetPos\x12\r.robotc.JPose\x1a\r.robotc.CmdId\x12.\n\x06SpeedJ\x12\x15.robotc.SpeedJRequest\x1a\r.robotc.CmdId\x12.\n\x06SpeedL\x12\x15.robotc.SpeedLRequest\x1a\r.robotc.CmdId\x12,\n\x05StopJ\x12\x14.robotc.StopJRequest\x1a\r.robotc.CmdId\x12,\n\x05StopL\x12\x14.robotc.StopLRequest\x1a\r.robotc.CmdId\x12\x31\n\x08StopMove\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12,\n\x05MoveC\x12\x14.robotc.MoveCRequest\x1a\r.robotc.CmdId\x12,\n\x05MoveJ\x12\x14.robotc.MoveJRequest\x1a\r.robotc.CmdId\x12,\n\x05MoveL\x12\x14.robotc.MoveLRequest\x1a\r.robotc.CmdId\x12-\n\x06MoveLJ\x12\x14.robotc.MoveLRequest\x1a\r.robotc.CmdId\x12,\n\x05MoveP\x12\x14.robotc.MovePRequest\x1a\r.robotc.CmdId\x12,\n\x06MovePT\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId\x12\x34\n\x0cMovePTStream\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId(\x01\x12-\n\x07MovePVT\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId\x12\x35\n\rMovePVTStream\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId(\x01\x12.\n\x08MovePVAT\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId\x12\x36\n\x0eMovePVATStream\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId(\x01\x12.\n\x06ServoC\x12\x15.robotc.ServoCRequest\x1a\r.robotc.CmdId\x12.\n\x06ServoJ\x12\x15.robotc.ServoJRequest\x1a\r.robotc.CmdId\x12\x39\n\x0cGetRobotData\x12\x16.google.protobuf.Empty\x1a\x11.robotc.RobotData\x12\x45\n\x11GetRobotBriefData\x12\x14.robotc.RobotDataCmd\x1a\x16.robotc.RobotBriefData(\x01\x30\x01\x12\x36\n\x0eGetRobotIOData\x12\x14.robotc.RobotDataCmd\x1a\n.robotc.IO(\x01\x30\x01\x12\x39\n\x0cGetRobotMode\x12\x16.google.protobuf.Empty\x1a\x11.robotc.RobotMode\x12@\n\x17GetActualJointPositions\x12\x16.google.protobuf.Empty\x1a\r.robotc.Joint\x12@\n\x17GetTargetJointPositions\x12\x16.google.protobuf.Empty\x1a\r.robotc.Joint\x12=\n\x14GetActualJointSpeeds\x12\x16.google.protobuf.Empty\x1a\r.robotc.Joint\x12=\n\x14GetTargetJointSpeeds\x12\x16.google.protobuf.Empty\x1a\r.robotc.Joint\x12:\n\x10GetActualTcpPose\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Vector\x12:\n\x10GetTargetTcpPose\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Vector\x12;\n\x11GetActualTcpSpeed\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Vector\x12;\n\x11GetTargetTcpSpeed\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Vector\x12=\n\x13GetActualFlangePose\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Vector\x12\x38\n\x0fGetJointTorques\x12\x16.google.protobuf.Empty\x1a\r.robotc.Joint\x12@\n\x11GetControllerTemp\x12\x16.google.protobuf.Empty\x1a\x13.robotc.Temperature\x12\x37\n\x0cGetJointTemp\x12\x12.robotc.IntRequest\x1a\x13.robotc.Temperature\x12\x39\n\x0eGetToolCurrent\x12\x16.google.protobuf.Empty\x1a\x0f.robotc.Current\x12$\n\x06SetDIO\x12\x0b.robotc.DIO\x1a\r.robotc.CmdId\x12$\n\x06GetDIO\x12\r.robotc.IOPin\x1a\x0b.robotc.DIO\x12\'\n\tSetTcpDIO\x12\x0b.robotc.DIO\x1a\r.robotc.CmdId\x12\'\n\tGetTcpDIO\x12\r.robotc.IOPin\x1a\x0b.robotc.DIO\x12$\n\x06SetAIO\x12\x0b.robotc.AIO\x1a\r.robotc.CmdId\x12$\n\x06GetAIO\x12\r.robotc.IOPin\x1a\x0b.robotc.AIO\x12(\n\nSetAInMode\x12\x0b.robotc.AIO\x1a\r.robotc.CmdId\x12(\n\nGetAInMode\x12\r.robotc.IOPin\x1a\x0b.robotc.AIO\x12)\n\x0bSetAOutMode\x12\x0b.robotc.AIO\x1a\r.robotc.CmdId\x12)\n\x0bGetAOutMode\x12\r.robotc.IOPin\x1a\x0b.robotc.AIO\x12\x31\n\x08StartSys\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x30\n\x07StopSys\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12-\n\x04Stop\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12.\n\x05\x45Stop\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x31\n\x06GetKDL\x12\x16.google.protobuf.Empty\x1a\x0f.robotc.KDParam\x12/\n\x07GetLogs\x12\x16.google.protobuf.Empty\x1a\x0c.robotc.Logs\x12\x36\n\rGetCurrentCmd\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x34\n\x10GetCmdExecStatus\x12\r.robotc.CmdId\x1a\x11.robotc.CmdStatus\x12\x34\n\x0fStartFineTuning\x12\x12.robotc.FineTuning\x1a\r.robotc.CmdId\x12\x37\n\x0eStopFineTuning\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12.\n\x05Pause\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12/\n\x06Resume\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x32\n\x11KinematicsForward\x12\r.robotc.Joint\x1a\x0e.robotc.Vector\x12\x32\n\x11KinematicsInverse\x12\x0e.robotc.Vector\x1a\r.robotc.Joint\x12:\n\x12\x43\x61lcTcpTranslation\x12\x14.robotc.CalcTcpParam\x1a\x0e.robotc.Vector\x12\x32\n\x08MoveLRPY\x12\x17.robotc.MoveLRPYRequest\x1a\r.robotc.CmdId\x12*\n\x06SetLED\x12\x11.robotc.LEDStatus\x1a\r.robotc.CmdId\x12.\n\x08SetVoice\x12\x13.robotc.VoiceStatus\x1a\r.robotc.CmdId\x12*\n\x06SetFan\x12\x11.robotc.FanStatus\x1a\r.robotc.CmdId\x12;\n\rGetLampStatus\x12\x16.google.protobuf.Empty\x1a\x12.robotc.LampStatus\x12\x38\n\x0bGetLuaState\x12\x16.google.protobuf.Empty\x1a\x11.robotc.LuaStatus\x12\x39\n\rSetExternalDO\x12\x13.robotc.ExternalDIO\x1a\x13.robotc.ExternalDIO\x12\x39\n\rGetExternalDO\x12\x13.robotc.ExternalDIO\x1a\x13.robotc.ExternalDIO\x12;\n\x0eGetExternalDOs\x12\x13.robotc.ExternalDIO\x1a\x14.robotc.ExternalDIOs\x12\x39\n\rSetExternalDI\x12\x13.robotc.ExternalDIO\x1a\x13.robotc.ExternalDIO\x12\x39\n\rGetExternalDI\x12\x13.robotc.ExternalDIO\x1a\x13.robotc.ExternalDIO\x12;\n\x0eGetExternalDIs\x12\x13.robotc.ExternalDIO\x1a\x14.robotc.ExternalDIOs\x12\x39\n\rSetExternalAO\x12\x13.robotc.ExternalAIO\x1a\x13.robotc.ExternalAIO\x12\x39\n\rGetExternalAO\x12\x13.robotc.ExternalAIO\x1a\x13.robotc.ExternalAIO\x12;\n\x0eGetExternalAOs\x12\x13.robotc.ExternalAIO\x1a\x14.robotc.ExternalAIOs\x12\x39\n\rSetExternalAI\x12\x13.robotc.ExternalAIO\x1a\x13.robotc.ExternalAIO\x12\x39\n\rGetExternalAI\x12\x13.robotc.ExternalAIO\x1a\x13.robotc.ExternalAIO\x12;\n\x0eGetExternalAIs\x12\x13.robotc.ExternalAIO\x1a\x14.robotc.ExternalAIOs\x12?\n\x0eGetExternalIOs\x12\x16.robotc.ExternalDevice\x1a\x13.robotc.ExternalIOs0\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x16robot_controller.proto\x12\x06robotc\x1a\x1bgoogle/protobuf/empty.proto\x1a\x0emessages.proto\"\xf8\x04\n\tRobotData\x12$\n\trobotMode\x18\x01 \x01(\x0b\x32\x11.robotc.RobotMode\x12%\n\njointModes\x18\x02 \x03(\x0b\x32\x11.robotc.JointMode\x12\"\n\x0b\x61\x63tualJoint\x18\x03 \x01(\x0b\x32\r.robotc.Joint\x12\'\n\x10\x61\x63tualJointSpeed\x18\x04 \x01(\x0b\x32\r.robotc.Joint\x12\"\n\x0btargetJoint\x18\x05 \x01(\x0b\x32\r.robotc.Joint\x12\'\n\x10targetJointSpeed\x18\x06 \x01(\x0b\x32\r.robotc.Joint\x12%\n\ractualTcpPose\x18\x07 \x01(\x0b\x32\x0e.robotc.Vector\x12&\n\x0e\x61\x63tualTcpSpeed\x18\x08 \x01(\x0b\x32\x0e.robotc.Vector\x12%\n\rtargetTcpPose\x18\t \x01(\x0b\x32\x0e.robotc.Vector\x12&\n\x0etargetTcpSpeed\x18\n \x01(\x0b\x32\x0e.robotc.Vector\x12%\n\ncurrentCmd\x18\x0b \x01(\x0b\x32\x11.robotc.CmdStatus\x12\x16\n\x02io\x18\x0c \x01(\x0b\x32\n.robotc.IO\x12\x16\n\x0evelocityFactor\x18\r \x01(\x01\x12\"\n\x08\x63lawInfo\x18\x0e \x01(\x0b\x32\x10.robotc.ClawInfo\x12!\n\njointTemps\x18\x0f \x01(\x0b\x32\r.robotc.Joint\x12#\n\x0ctargetTorque\x18\x10 \x01(\x0b\x32\r.robotc.Joint\x12#\n\x0c\x61\x63tualTorque\x18\x11 \x01(\x0b\x32\r.robotc.Joint\"\x0e\n\x0cRobotDataCmd\"\x87\x02\n\x0eRobotBriefData\x12$\n\trobotMode\x18\x01 \x01(\x0b\x32\x11.robotc.RobotMode\x12\"\n\x0b\x61\x63tualJoint\x18\x02 \x01(\x0b\x32\r.robotc.Joint\x12\"\n\x0btargetJoint\x18\x03 \x01(\x0b\x32\r.robotc.Joint\x12%\n\ractualTcpPose\x18\x04 \x01(\x0b\x32\x0e.robotc.Vector\x12%\n\rtargetTcpPose\x18\x05 \x01(\x0b\x32\x0e.robotc.Vector\x12\x16\n\x0evelocityFactor\x18\x06 \x01(\x01\x12!\n\njointTemps\x18\x07 \x01(\x0b\x32\r.robotc.Joint\"\x19\n\tRobotMode\x12\x0c\n\x04mode\x18\x01 \x01(\x05\"8\n\x02\x44H\x12\t\n\x01\x64\x18\x01 \x01(\x01\x12\t\n\x01\x61\x18\x02 \x01(\x01\x12\r\n\x05\x61lpha\x18\x03 \x01(\x01\x12\r\n\x05theta\x18\x04 \x01(\x01\"\'\n\x07KDParam\x12\x1c\n\x08\x64hParams\x18\x01 \x03(\x0b\x32\n.robotc.DH\"\x19\n\tJointMode\x12\x0c\n\x04mode\x18\x01 \x01(\x05\"\x1e\n\tAmplitude\x12\x11\n\tamplitude\x18\x01 \x01(\x01\"\x19\n\x06HoldOn\x12\x0f\n\x07hold_on\x18\x01 \x01(\x05\"\x16\n\x05\x46orce\x12\r\n\x05\x66orce\x18\x01 \x01(\x01\"\x18\n\x06Weight\x12\x0e\n\x06weight\x18\x01 \x01(\x01\"M\n\x08\x43lawInfo\x12\x11\n\tamplitude\x18\x01 \x01(\x01\x12\r\n\x05\x66orce\x18\x02 \x01(\x01\x12\x0e\n\x06weight\x18\x03 \x01(\x01\x12\x0f\n\x07hold_on\x18\x04 \x01(\x05\"\"\n\x0b\x46orceTorque\x12\x13\n\x0b\x66orceTorque\x18\x01 \x03(\x01\"\x17\n\x05Joint\x12\x0e\n\x06joints\x18\x01 \x03(\x01\"\x18\n\x06Vector\x12\x0e\n\x06vector\x18\x01 \x03(\x01\"\x1d\n\x0bTemperature\x12\x0e\n\x06\x64\x65gree\x18\x01 \x01(\x01\"\x1a\n\x07\x43urrent\x12\x0f\n\x07\x63urrent\x18\x01 \x01(\x01\"\x17\n\x06\x46\x61\x63tor\x12\r\n\x05value\x18\x01 \x01(\x01\"\x12\n\x03Ret\x12\x0b\n\x03ret\x18\x01 \x01(\x08\"\x13\n\x05\x43mdId\x12\n\n\x02id\x18\x01 \x01(\x05\"&\n\tCmdStatus\x12\n\n\x02id\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x05\"\x1b\n\nIntRequest\x12\r\n\x05index\x18\x01 \x01(\x05\" \n\x04Logs\x12\x18\n\x03log\x18\x01 \x03(\x0b\x32\x0b.robotc.Log\"/\n\x03Log\x12\r\n\x05level\x18\x01 \x01(\x05\x12\x0c\n\x04\x63ode\x18\x02 \x01(\x05\x12\x0b\n\x03msg\x18\x03 \x01(\t\"\x1c\n\x0cSleepRequest\x12\x0c\n\x04time\x18\x01 \x01(\x05\"H\n\rSpeedJRequest\x12\x13\n\x0bjoint_speed\x18\x01 \x03(\x01\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x02 \x01(\x01\x12\x0c\n\x04time\x18\x03 \x01(\x01\"d\n\rSpeedLRequest\x12\x10\n\x08velocity\x18\x01 \x03(\x01\x12\x1d\n\x15position_acceleration\x18\x02 \x01(\x01\x12\x0c\n\x04time\x18\x03 \x01(\x01\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x04 \x01(\x01\"$\n\x0cStopJRequest\x12\x14\n\x0c\x64\x65\x63\x65leration\x18\x01 \x01(\x01\"C\n\x0cStopLRequest\x12\x1d\n\x15position_deceleration\x18\x01 \x01(\x01\x12\x14\n\x0c\x64\x65\x63\x65leration\x18\x02 \x01(\x01\"\xdf\x01\n\x0cMoveCRequest\x12\x10\n\x08pose_via\x18\x01 \x03(\x01\x12\x0f\n\x07pose_to\x18\x02 \x03(\x01\x12\x19\n\x11pose_via_is_joint\x18\x03 \x01(\x08\x12\x18\n\x10pose_to_is_joint\x18\x04 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x05 \x01(\x01\x12\x10\n\x08velocity\x18\x06 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x07 \x01(\x01\x12\x0c\n\x04mode\x18\x08 \x01(\x05\x12\x0c\n\x04time\x18\t \x01(\x01\x12\x1d\n\tpose_base\x18\n \x01(\x0b\x32\n.robotc.PR\"\xad\x01\n\x0cMoveJRequest\x12\x15\n\rjoint_pose_to\x18\x01 \x03(\x01\x12\x1b\n\x13pose_is_joint_angle\x18\x02 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x0c\n\x04time\x18\x05 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x06 \x01(\x01\x12\x1d\n\tpose_base\x18\x07 \x01(\x0b\x32\n.robotc.PR\"\xa7\x01\n\x0cMoveLRequest\x12\x0f\n\x07pose_to\x18\x01 \x03(\x01\x12\x1b\n\x13pose_is_joint_angle\x18\x02 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x0c\n\x04time\x18\x05 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x06 \x01(\x01\x12\x1d\n\tpose_base\x18\x07 \x01(\x0b\x32\n.robotc.PR\"n\n\x0fMoveLRPYRequest\x12\x0f\n\x07pose_to\x18\x01 \x03(\x01\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x02 \x01(\x01\x12\x10\n\x08velocity\x18\x03 \x01(\x01\x12\x0c\n\x04time\x18\x04 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x05 \x01(\x01\"z\n\x0cMovePRequest\x12\x0f\n\x07pose_to\x18\x01 \x03(\x01\x12\x1b\n\x13pose_is_joint_angle\x18\x02 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x05 \x01(\x01\"{\n\rServoCRequest\x12\x0f\n\x07pose_to\x18\x01 \x03(\x01\x12\x1b\n\x13pose_is_joint_angle\x18\x02 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x14\n\x0c\x62lend_radius\x18\x05 \x01(\x01\"\xa0\x01\n\rServoJRequest\x12\x15\n\rjoint_pose_to\x18\x01 \x03(\x01\x12\x1b\n\x13pose_is_joint_angle\x18\x02 \x01(\x08\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x0c\n\x04time\x18\x05 \x01(\x01\x12\x17\n\x0flook_ahead_time\x18\x06 \x01(\x01\x12\x0c\n\x04gain\x18\x07 \x01(\x05\"_\n\nFineTuning\x12\x0c\n\x04mode\x18\x01 \x01(\x05\x12\x0c\n\x04\x62\x61se\x18\x02 \x01(\x05\x12\x12\n\ncoordinate\x18\x03 \x01(\x05\x12\x0e\n\x06target\x18\x04 \x01(\x05\x12\x11\n\tdirection\x18\x05 \x01(\x05\"7\n\tLEDStatus\x12\x0c\n\x04mode\x18\x01 \x01(\x05\x12\r\n\x05speed\x18\x02 \x01(\x05\x12\r\n\x05\x63olor\x18\x03 \x03(\x05\",\n\x0bVoiceStatus\x12\r\n\x05voice\x18\x01 \x01(\x05\x12\x0e\n\x06volume\x18\x02 \x01(\x05\"\x18\n\tFanStatus\x12\x0b\n\x03\x66\x61n\x18\x01 \x01(\x05\":\n\x0c\x43\x61lcTcpParam\x12\x1d\n\x05poses\x18\x01 \x03(\x0b\x32\x0e.robotc.Vector\x12\x0b\n\x03tol\x18\x02 \x01(\x01\"o\n\tLuaStatus\x12\x1f\n\x05state\x18\x01 \x01(\x0e\x32\x10.robotc.LuaState\x12\x1d\n\tlast_pose\x18\x02 \x01(\x0b\x32\n.robotc.PR\x12\"\n\x0blast_joints\x18\x03 \x01(\x0b\x32\r.robotc.JPose\"p\n\nLampStatus\x12\x1e\n\x03led\x18\x01 \x01(\x0b\x32\x11.robotc.LEDStatus\x12\"\n\x05voice\x18\x02 \x01(\x0b\x32\x13.robotc.VoiceStatus\x12\x1e\n\x03\x66\x61n\x18\x03 \x01(\x0b\x32\x11.robotc.FanStatus\"B\n\x0bPVATRequest\x12\x10\n\x08\x64uration\x18\x01 \x01(\x01\x12\t\n\x01q\x18\x02 \x03(\x01\x12\t\n\x01v\x18\x03 \x03(\x01\x12\x0b\n\x03\x61\x63\x63\x18\x04 \x03(\x01\"&\n\x0b\x45xternalPin\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0b\n\x03pin\x18\x02 \x01(\x05\"9\n\x0f\x45xternalDigital\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0b\n\x03pin\x18\x02 \x01(\x05\x12\r\n\x05value\x18\x03 \x01(\x05\"8\n\x0e\x45xternalAnalog\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0b\n\x03pin\x18\x02 \x01(\x05\x12\r\n\x05value\x18\x03 \x01(\x01\"\x1c\n\x0e\x45xternalDevice\x12\n\n\x02id\x18\x01 \x01(\x05\"\xa3\x01\n\x0b\x45xternalIOs\x12$\n\x03\x64is\x18\x01 \x03(\x0b\x32\x17.robotc.ExternalDigital\x12$\n\x03\x64os\x18\x02 \x03(\x0b\x32\x17.robotc.ExternalDigital\x12#\n\x03\x61is\x18\x03 \x03(\x0b\x32\x16.robotc.ExternalAnalog\x12#\n\x03\x61os\x18\x04 \x03(\x0b\x32\x16.robotc.ExternalAnalog2\x81(\n\x0fRobotController\x12\x32\n\tPowerDown\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12,\n\x05Sleep\x12\x14.robotc.SleepRequest\x1a\r.robotc.CmdId\x12-\n\x04Sync\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x32\n\tTeachMode\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x35\n\x0c\x45ndTeachMode\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x32\n\x11SetVelocityFactor\x12\x0e.robotc.Factor\x1a\r.robotc.CmdId\x12;\n\x11GetVelocityFactor\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Factor\x12/\n\nSetGravity\x12\x12.robotc.Coordinate\x1a\r.robotc.CmdId\x12\x38\n\nGetGravity\x12\x16.google.protobuf.Empty\x1a\x12.robotc.Coordinate\x12,\n\nSetPayload\x12\x0f.robotc.Payload\x1a\r.robotc.CmdId\x12\x35\n\nGetPayload\x12\x16.google.protobuf.Empty\x1a\x0f.robotc.Payload\x12\x34\n\x0eSetPayloadMass\x12\x13.robotc.PayloadMass\x1a\r.robotc.CmdId\x12=\n\x0eGetPayloadMass\x12\x16.google.protobuf.Empty\x1a\x13.robotc.PayloadMass\x12\x32\n\rSetPayloadCog\x12\x12.robotc.PayloadCog\x1a\r.robotc.CmdId\x12;\n\rGetPayloadCog\x12\x16.google.protobuf.Empty\x1a\x12.robotc.PayloadCog\x12#\n\x06SetTcp\x12\n.robotc.PR\x1a\r.robotc.CmdId\x12,\n\x06GetTcp\x12\x16.google.protobuf.Empty\x1a\n.robotc.PR\x12\x34\n\x10SetClawAmplitude\x12\x11.robotc.Amplitude\x1a\r.robotc.CmdId\x12=\n\x10GetClawAmplitude\x12\x16.google.protobuf.Empty\x1a\x11.robotc.Amplitude\x12\x37\n\rGetClawHoldOn\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.HoldOn\x12,\n\x0cSetClawForce\x12\r.robotc.Force\x1a\r.robotc.CmdId\x12\x37\n\rGetClawWeight\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Weight\x12:\n\x0bGetTcpForce\x12\x16.google.protobuf.Empty\x1a\x13.robotc.ForceTorque\x12&\n\x06SetPos\x12\r.robotc.JPose\x1a\r.robotc.CmdId\x12.\n\x06SpeedJ\x12\x15.robotc.SpeedJRequest\x1a\r.robotc.CmdId\x12.\n\x06SpeedL\x12\x15.robotc.SpeedLRequest\x1a\r.robotc.CmdId\x12,\n\x05StopJ\x12\x14.robotc.StopJRequest\x1a\r.robotc.CmdId\x12,\n\x05StopL\x12\x14.robotc.StopLRequest\x1a\r.robotc.CmdId\x12\x31\n\x08StopMove\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12,\n\x05MoveC\x12\x14.robotc.MoveCRequest\x1a\r.robotc.CmdId\x12,\n\x05MoveJ\x12\x14.robotc.MoveJRequest\x1a\r.robotc.CmdId\x12,\n\x05MoveL\x12\x14.robotc.MoveLRequest\x1a\r.robotc.CmdId\x12-\n\x06MoveLJ\x12\x14.robotc.MoveLRequest\x1a\r.robotc.CmdId\x12,\n\x05MoveP\x12\x14.robotc.MovePRequest\x1a\r.robotc.CmdId\x12,\n\x06MovePT\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId\x12\x34\n\x0cMovePTStream\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId(\x01\x12-\n\x07MovePVT\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId\x12\x35\n\rMovePVTStream\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId(\x01\x12.\n\x08MovePVAT\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId\x12\x36\n\x0eMovePVATStream\x12\x13.robotc.PVATRequest\x1a\r.robotc.CmdId(\x01\x12.\n\x06ServoC\x12\x15.robotc.ServoCRequest\x1a\r.robotc.CmdId\x12.\n\x06ServoJ\x12\x15.robotc.ServoJRequest\x1a\r.robotc.CmdId\x12\x39\n\x0cGetRobotData\x12\x16.google.protobuf.Empty\x1a\x11.robotc.RobotData\x12\x45\n\x11GetRobotBriefData\x12\x14.robotc.RobotDataCmd\x1a\x16.robotc.RobotBriefData(\x01\x30\x01\x12\x36\n\x0eGetRobotIOData\x12\x14.robotc.RobotDataCmd\x1a\n.robotc.IO(\x01\x30\x01\x12\x39\n\x0cGetRobotMode\x12\x16.google.protobuf.Empty\x1a\x11.robotc.RobotMode\x12@\n\x17GetActualJointPositions\x12\x16.google.protobuf.Empty\x1a\r.robotc.Joint\x12@\n\x17GetTargetJointPositions\x12\x16.google.protobuf.Empty\x1a\r.robotc.Joint\x12=\n\x14GetActualJointSpeeds\x12\x16.google.protobuf.Empty\x1a\r.robotc.Joint\x12=\n\x14GetTargetJointSpeeds\x12\x16.google.protobuf.Empty\x1a\r.robotc.Joint\x12:\n\x10GetActualTcpPose\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Vector\x12:\n\x10GetTargetTcpPose\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Vector\x12;\n\x11GetActualTcpSpeed\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Vector\x12;\n\x11GetTargetTcpSpeed\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Vector\x12=\n\x13GetActualFlangePose\x12\x16.google.protobuf.Empty\x1a\x0e.robotc.Vector\x12\x38\n\x0fGetJointTorques\x12\x16.google.protobuf.Empty\x1a\r.robotc.Joint\x12@\n\x11GetControllerTemp\x12\x16.google.protobuf.Empty\x1a\x13.robotc.Temperature\x12\x37\n\x0cGetJointTemp\x12\x12.robotc.IntRequest\x1a\x13.robotc.Temperature\x12\x39\n\x0eGetToolCurrent\x12\x16.google.protobuf.Empty\x1a\x0f.robotc.Current\x12$\n\x06SetDIO\x12\x0b.robotc.DIO\x1a\r.robotc.CmdId\x12$\n\x06GetDIO\x12\r.robotc.IOPin\x1a\x0b.robotc.DIO\x12\'\n\tSetTcpDIO\x12\x0b.robotc.DIO\x1a\r.robotc.CmdId\x12\'\n\tGetTcpDIO\x12\r.robotc.IOPin\x1a\x0b.robotc.DIO\x12$\n\x06SetAIO\x12\x0b.robotc.AIO\x1a\r.robotc.CmdId\x12$\n\x06GetAIO\x12\r.robotc.IOPin\x1a\x0b.robotc.AIO\x12(\n\nSetAInMode\x12\x0b.robotc.AIO\x1a\r.robotc.CmdId\x12(\n\nGetAInMode\x12\r.robotc.IOPin\x1a\x0b.robotc.AIO\x12)\n\x0bSetAOutMode\x12\x0b.robotc.AIO\x1a\r.robotc.CmdId\x12)\n\x0bGetAOutMode\x12\r.robotc.IOPin\x1a\x0b.robotc.AIO\x12\x31\n\x08StartSys\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x30\n\x07StopSys\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12-\n\x04Stop\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12.\n\x05\x45Stop\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x31\n\x06GetKDL\x12\x16.google.protobuf.Empty\x1a\x0f.robotc.KDParam\x12/\n\x07GetLogs\x12\x16.google.protobuf.Empty\x1a\x0c.robotc.Logs\x12\x36\n\rGetCurrentCmd\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x34\n\x10GetCmdExecStatus\x12\r.robotc.CmdId\x1a\x11.robotc.CmdStatus\x12\x34\n\x0fStartFineTuning\x12\x12.robotc.FineTuning\x1a\r.robotc.CmdId\x12\x37\n\x0eStopFineTuning\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12.\n\x05Pause\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12/\n\x06Resume\x12\x16.google.protobuf.Empty\x1a\r.robotc.CmdId\x12\x32\n\x11KinematicsForward\x12\r.robotc.Joint\x1a\x0e.robotc.Vector\x12\x32\n\x11KinematicsInverse\x12\x0e.robotc.Vector\x1a\r.robotc.Joint\x12:\n\x12\x43\x61lcTcpTranslation\x12\x14.robotc.CalcTcpParam\x1a\x0e.robotc.Vector\x12\x32\n\x08MoveLRPY\x12\x17.robotc.MoveLRPYRequest\x1a\r.robotc.CmdId\x12*\n\x06SetLED\x12\x11.robotc.LEDStatus\x1a\r.robotc.CmdId\x12.\n\x08SetVoice\x12\x13.robotc.VoiceStatus\x1a\r.robotc.CmdId\x12*\n\x06SetFan\x12\x11.robotc.FanStatus\x1a\r.robotc.CmdId\x12;\n\rGetLampStatus\x12\x16.google.protobuf.Empty\x1a\x12.robotc.LampStatus\x12\x38\n\x0bGetLuaState\x12\x16.google.protobuf.Empty\x1a\x11.robotc.LuaStatus\x12:\n\rSetExternalDO\x12\x17.robotc.ExternalDigital\x1a\x10.robotc.Response\x12=\n\rGetExternalDO\x12\x13.robotc.ExternalPin\x1a\x17.robotc.ExternalDigital\x12=\n\rGetExternalDI\x12\x13.robotc.ExternalPin\x1a\x17.robotc.ExternalDigital\x12\x39\n\rSetExternalAO\x12\x16.robotc.ExternalAnalog\x1a\x10.robotc.Response\x12<\n\rGetExternalAO\x12\x13.robotc.ExternalPin\x1a\x16.robotc.ExternalAnalog\x12<\n\rGetExternalAI\x12\x13.robotc.ExternalPin\x1a\x16.robotc.ExternalAnalog\x12=\n\x0eGetExternalIOs\x12\x16.robotc.ExternalDevice\x1a\x13.robotc.ExternalIOsb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,messages__pb2.DESCRIPTOR,])
 
@@ -2022,38 +2022,24 @@ _PVATREQUEST = _descriptor.Descriptor(
 )
 
 
-_EXTERNALDIO = _descriptor.Descriptor(
-  name='ExternalDIO',
-  full_name='robotc.ExternalDIO',
+_EXTERNALPIN = _descriptor.Descriptor(
+  name='ExternalPin',
+  full_name='robotc.ExternalPin',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='robotc.ExternalDIO.id', index=0,
+      name='id', full_name='robotc.ExternalPin.id', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='io', full_name='robotc.ExternalDIO.io', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='n', full_name='robotc.ExternalDIO.n', index=2,
-      number=3, type=13, cpp_type=3, label=1,
+      name='pin', full_name='robotc.ExternalPin.pin', index=1,
+      number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ok', full_name='robotc.ExternalDIO.ok', index=3,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -2070,42 +2056,35 @@ _EXTERNALDIO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=3691,
-  serialized_end=3764,
+  serialized_end=3729,
 )
 
 
-_EXTERNALAIO = _descriptor.Descriptor(
-  name='ExternalAIO',
-  full_name='robotc.ExternalAIO',
+_EXTERNALDIGITAL = _descriptor.Descriptor(
+  name='ExternalDigital',
+  full_name='robotc.ExternalDigital',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='robotc.ExternalAIO.id', index=0,
+      name='id', full_name='robotc.ExternalDigital.id', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='io', full_name='robotc.ExternalAIO.io', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='n', full_name='robotc.ExternalAIO.n', index=2,
-      number=3, type=13, cpp_type=3, label=1,
+      name='pin', full_name='robotc.ExternalDigital.pin', index=1,
+      number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ok', full_name='robotc.ExternalAIO.ok', index=3,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='value', full_name='robotc.ExternalDigital.value', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -2121,36 +2100,36 @@ _EXTERNALAIO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3766,
-  serialized_end=3839,
+  serialized_start=3731,
+  serialized_end=3788,
 )
 
 
-_EXTERNALDIOS = _descriptor.Descriptor(
-  name='ExternalDIOs',
-  full_name='robotc.ExternalDIOs',
+_EXTERNALANALOG = _descriptor.Descriptor(
+  name='ExternalAnalog',
+  full_name='robotc.ExternalAnalog',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='robotc.ExternalDIOs.id', index=0,
+      name='id', full_name='robotc.ExternalAnalog.id', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ios', full_name='robotc.ExternalDIOs.ios', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='pin', full_name='robotc.ExternalAnalog.pin', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ok', full_name='robotc.ExternalDIOs.ok', index=2,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='value', full_name='robotc.ExternalAnalog.value', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -2166,53 +2145,8 @@ _EXTERNALDIOS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3841,
-  serialized_end=3905,
-)
-
-
-_EXTERNALAIOS = _descriptor.Descriptor(
-  name='ExternalAIOs',
-  full_name='robotc.ExternalAIOs',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='robotc.ExternalAIOs.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ios', full_name='robotc.ExternalAIOs.ios', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ok', full_name='robotc.ExternalAIOs.ok', index=2,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3907,
-  serialized_end=3971,
+  serialized_start=3790,
+  serialized_end=3846,
 )
 
 
@@ -2242,8 +2176,8 @@ _EXTERNALDEVICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3973,
-  serialized_end=4001,
+  serialized_start=3848,
+  serialized_end=3876,
 )
 
 
@@ -2255,44 +2189,30 @@ _EXTERNALIOS = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='robotc.ExternalIOs.id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='dis', full_name='robotc.ExternalIOs.dis', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dis', full_name='robotc.ExternalIOs.dis', index=1,
+      name='dos', full_name='robotc.ExternalIOs.dos', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dos', full_name='robotc.ExternalIOs.dos', index=2,
+      name='ais', full_name='robotc.ExternalIOs.ais', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ais', full_name='robotc.ExternalIOs.ais', index=3,
+      name='aos', full_name='robotc.ExternalIOs.aos', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='aos', full_name='robotc.ExternalIOs.aos', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ok', full_name='robotc.ExternalIOs.ok', index=5,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -2308,8 +2228,8 @@ _EXTERNALIOS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4004,
-  serialized_end=4145,
+  serialized_start=3879,
+  serialized_end=4042,
 )
 
 _ROBOTDATA.fields_by_name['robotMode'].message_type = _ROBOTMODE
@@ -2346,14 +2266,10 @@ _LUASTATUS.fields_by_name['last_joints'].message_type = messages__pb2._JPOSE
 _LAMPSTATUS.fields_by_name['led'].message_type = _LEDSTATUS
 _LAMPSTATUS.fields_by_name['voice'].message_type = _VOICESTATUS
 _LAMPSTATUS.fields_by_name['fan'].message_type = _FANSTATUS
-_EXTERNALDIO.fields_by_name['io'].message_type = messages__pb2._DIO
-_EXTERNALAIO.fields_by_name['io'].message_type = messages__pb2._AIO
-_EXTERNALDIOS.fields_by_name['ios'].message_type = messages__pb2._DIO
-_EXTERNALAIOS.fields_by_name['ios'].message_type = messages__pb2._AIO
-_EXTERNALIOS.fields_by_name['dis'].message_type = messages__pb2._DIO
-_EXTERNALIOS.fields_by_name['dos'].message_type = messages__pb2._DIO
-_EXTERNALIOS.fields_by_name['ais'].message_type = messages__pb2._AIO
-_EXTERNALIOS.fields_by_name['aos'].message_type = messages__pb2._AIO
+_EXTERNALIOS.fields_by_name['dis'].message_type = _EXTERNALDIGITAL
+_EXTERNALIOS.fields_by_name['dos'].message_type = _EXTERNALDIGITAL
+_EXTERNALIOS.fields_by_name['ais'].message_type = _EXTERNALANALOG
+_EXTERNALIOS.fields_by_name['aos'].message_type = _EXTERNALANALOG
 DESCRIPTOR.message_types_by_name['RobotData'] = _ROBOTDATA
 DESCRIPTOR.message_types_by_name['RobotDataCmd'] = _ROBOTDATACMD
 DESCRIPTOR.message_types_by_name['RobotBriefData'] = _ROBOTBRIEFDATA
@@ -2398,10 +2314,9 @@ DESCRIPTOR.message_types_by_name['CalcTcpParam'] = _CALCTCPPARAM
 DESCRIPTOR.message_types_by_name['LuaStatus'] = _LUASTATUS
 DESCRIPTOR.message_types_by_name['LampStatus'] = _LAMPSTATUS
 DESCRIPTOR.message_types_by_name['PVATRequest'] = _PVATREQUEST
-DESCRIPTOR.message_types_by_name['ExternalDIO'] = _EXTERNALDIO
-DESCRIPTOR.message_types_by_name['ExternalAIO'] = _EXTERNALAIO
-DESCRIPTOR.message_types_by_name['ExternalDIOs'] = _EXTERNALDIOS
-DESCRIPTOR.message_types_by_name['ExternalAIOs'] = _EXTERNALAIOS
+DESCRIPTOR.message_types_by_name['ExternalPin'] = _EXTERNALPIN
+DESCRIPTOR.message_types_by_name['ExternalDigital'] = _EXTERNALDIGITAL
+DESCRIPTOR.message_types_by_name['ExternalAnalog'] = _EXTERNALANALOG
 DESCRIPTOR.message_types_by_name['ExternalDevice'] = _EXTERNALDEVICE
 DESCRIPTOR.message_types_by_name['ExternalIOs'] = _EXTERNALIOS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -2714,33 +2629,26 @@ PVATRequest = _reflection.GeneratedProtocolMessageType('PVATRequest', (_message.
   ))
 _sym_db.RegisterMessage(PVATRequest)
 
-ExternalDIO = _reflection.GeneratedProtocolMessageType('ExternalDIO', (_message.Message,), dict(
-  DESCRIPTOR = _EXTERNALDIO,
+ExternalPin = _reflection.GeneratedProtocolMessageType('ExternalPin', (_message.Message,), dict(
+  DESCRIPTOR = _EXTERNALPIN,
   __module__ = 'robot_controller_pb2'
-  # @@protoc_insertion_point(class_scope:robotc.ExternalDIO)
+  # @@protoc_insertion_point(class_scope:robotc.ExternalPin)
   ))
-_sym_db.RegisterMessage(ExternalDIO)
+_sym_db.RegisterMessage(ExternalPin)
 
-ExternalAIO = _reflection.GeneratedProtocolMessageType('ExternalAIO', (_message.Message,), dict(
-  DESCRIPTOR = _EXTERNALAIO,
+ExternalDigital = _reflection.GeneratedProtocolMessageType('ExternalDigital', (_message.Message,), dict(
+  DESCRIPTOR = _EXTERNALDIGITAL,
   __module__ = 'robot_controller_pb2'
-  # @@protoc_insertion_point(class_scope:robotc.ExternalAIO)
+  # @@protoc_insertion_point(class_scope:robotc.ExternalDigital)
   ))
-_sym_db.RegisterMessage(ExternalAIO)
+_sym_db.RegisterMessage(ExternalDigital)
 
-ExternalDIOs = _reflection.GeneratedProtocolMessageType('ExternalDIOs', (_message.Message,), dict(
-  DESCRIPTOR = _EXTERNALDIOS,
+ExternalAnalog = _reflection.GeneratedProtocolMessageType('ExternalAnalog', (_message.Message,), dict(
+  DESCRIPTOR = _EXTERNALANALOG,
   __module__ = 'robot_controller_pb2'
-  # @@protoc_insertion_point(class_scope:robotc.ExternalDIOs)
+  # @@protoc_insertion_point(class_scope:robotc.ExternalAnalog)
   ))
-_sym_db.RegisterMessage(ExternalDIOs)
-
-ExternalAIOs = _reflection.GeneratedProtocolMessageType('ExternalAIOs', (_message.Message,), dict(
-  DESCRIPTOR = _EXTERNALAIOS,
-  __module__ = 'robot_controller_pb2'
-  # @@protoc_insertion_point(class_scope:robotc.ExternalAIOs)
-  ))
-_sym_db.RegisterMessage(ExternalAIOs)
+_sym_db.RegisterMessage(ExternalAnalog)
 
 ExternalDevice = _reflection.GeneratedProtocolMessageType('ExternalDevice', (_message.Message,), dict(
   DESCRIPTOR = _EXTERNALDEVICE,
@@ -2764,8 +2672,8 @@ _ROBOTCONTROLLER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=4148,
-  serialized_end=9618,
+  serialized_start=4045,
+  serialized_end=9166,
   methods=[
   _descriptor.MethodDescriptor(
     name='PowerDown',
@@ -3582,8 +3490,8 @@ _ROBOTCONTROLLER = _descriptor.ServiceDescriptor(
     full_name='robotc.RobotController.SetExternalDO',
     index=90,
     containing_service=None,
-    input_type=_EXTERNALDIO,
-    output_type=_EXTERNALDIO,
+    input_type=_EXTERNALDIGITAL,
+    output_type=messages__pb2._RESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
@@ -3591,104 +3499,50 @@ _ROBOTCONTROLLER = _descriptor.ServiceDescriptor(
     full_name='robotc.RobotController.GetExternalDO',
     index=91,
     containing_service=None,
-    input_type=_EXTERNALDIO,
-    output_type=_EXTERNALDIO,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetExternalDOs',
-    full_name='robotc.RobotController.GetExternalDOs',
-    index=92,
-    containing_service=None,
-    input_type=_EXTERNALDIO,
-    output_type=_EXTERNALDIOS,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='SetExternalDI',
-    full_name='robotc.RobotController.SetExternalDI',
-    index=93,
-    containing_service=None,
-    input_type=_EXTERNALDIO,
-    output_type=_EXTERNALDIO,
+    input_type=_EXTERNALPIN,
+    output_type=_EXTERNALDIGITAL,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='GetExternalDI',
     full_name='robotc.RobotController.GetExternalDI',
-    index=94,
+    index=92,
     containing_service=None,
-    input_type=_EXTERNALDIO,
-    output_type=_EXTERNALDIO,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetExternalDIs',
-    full_name='robotc.RobotController.GetExternalDIs',
-    index=95,
-    containing_service=None,
-    input_type=_EXTERNALDIO,
-    output_type=_EXTERNALDIOS,
+    input_type=_EXTERNALPIN,
+    output_type=_EXTERNALDIGITAL,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='SetExternalAO',
     full_name='robotc.RobotController.SetExternalAO',
-    index=96,
+    index=93,
     containing_service=None,
-    input_type=_EXTERNALAIO,
-    output_type=_EXTERNALAIO,
+    input_type=_EXTERNALANALOG,
+    output_type=messages__pb2._RESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='GetExternalAO',
     full_name='robotc.RobotController.GetExternalAO',
-    index=97,
+    index=94,
     containing_service=None,
-    input_type=_EXTERNALAIO,
-    output_type=_EXTERNALAIO,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetExternalAOs',
-    full_name='robotc.RobotController.GetExternalAOs',
-    index=98,
-    containing_service=None,
-    input_type=_EXTERNALAIO,
-    output_type=_EXTERNALAIOS,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='SetExternalAI',
-    full_name='robotc.RobotController.SetExternalAI',
-    index=99,
-    containing_service=None,
-    input_type=_EXTERNALAIO,
-    output_type=_EXTERNALAIO,
+    input_type=_EXTERNALPIN,
+    output_type=_EXTERNALANALOG,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='GetExternalAI',
     full_name='robotc.RobotController.GetExternalAI',
-    index=100,
+    index=95,
     containing_service=None,
-    input_type=_EXTERNALAIO,
-    output_type=_EXTERNALAIO,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetExternalAIs',
-    full_name='robotc.RobotController.GetExternalAIs',
-    index=101,
-    containing_service=None,
-    input_type=_EXTERNALAIO,
-    output_type=_EXTERNALAIOS,
+    input_type=_EXTERNALPIN,
+    output_type=_EXTERNALANALOG,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='GetExternalIOs',
     full_name='robotc.RobotController.GetExternalIOs',
-    index=102,
+    index=96,
     containing_service=None,
     input_type=_EXTERNALDEVICE,
     output_type=_EXTERNALIOS,

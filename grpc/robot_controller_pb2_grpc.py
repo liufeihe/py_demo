@@ -3,7 +3,7 @@ import grpc
 
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 import messages_pb2 as messages__pb2
-import rcs_pb2 as robot__controller__pb2
+import robot_controller_pb2 as robot__controller__pb2
 
 
 class RobotControllerStub(object):
@@ -468,65 +468,35 @@ class RobotControllerStub(object):
         )
     self.SetExternalDO = channel.unary_unary(
         '/robotc.RobotController/SetExternalDO',
-        request_serializer=robot__controller__pb2.ExternalDIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalDIO.FromString,
+        request_serializer=robot__controller__pb2.ExternalDigital.SerializeToString,
+        response_deserializer=messages__pb2.Response.FromString,
         )
     self.GetExternalDO = channel.unary_unary(
         '/robotc.RobotController/GetExternalDO',
-        request_serializer=robot__controller__pb2.ExternalDIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalDIO.FromString,
-        )
-    self.GetExternalDOs = channel.unary_unary(
-        '/robotc.RobotController/GetExternalDOs',
-        request_serializer=robot__controller__pb2.ExternalDIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalDIOs.FromString,
-        )
-    self.SetExternalDI = channel.unary_unary(
-        '/robotc.RobotController/SetExternalDI',
-        request_serializer=robot__controller__pb2.ExternalDIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalDIO.FromString,
+        request_serializer=robot__controller__pb2.ExternalPin.SerializeToString,
+        response_deserializer=robot__controller__pb2.ExternalDigital.FromString,
         )
     self.GetExternalDI = channel.unary_unary(
         '/robotc.RobotController/GetExternalDI',
-        request_serializer=robot__controller__pb2.ExternalDIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalDIO.FromString,
-        )
-    self.GetExternalDIs = channel.unary_unary(
-        '/robotc.RobotController/GetExternalDIs',
-        request_serializer=robot__controller__pb2.ExternalDIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalDIOs.FromString,
+        request_serializer=robot__controller__pb2.ExternalPin.SerializeToString,
+        response_deserializer=robot__controller__pb2.ExternalDigital.FromString,
         )
     self.SetExternalAO = channel.unary_unary(
         '/robotc.RobotController/SetExternalAO',
-        request_serializer=robot__controller__pb2.ExternalAIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalAIO.FromString,
+        request_serializer=robot__controller__pb2.ExternalAnalog.SerializeToString,
+        response_deserializer=messages__pb2.Response.FromString,
         )
     self.GetExternalAO = channel.unary_unary(
         '/robotc.RobotController/GetExternalAO',
-        request_serializer=robot__controller__pb2.ExternalAIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalAIO.FromString,
-        )
-    self.GetExternalAOs = channel.unary_unary(
-        '/robotc.RobotController/GetExternalAOs',
-        request_serializer=robot__controller__pb2.ExternalAIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalAIOs.FromString,
-        )
-    self.SetExternalAI = channel.unary_unary(
-        '/robotc.RobotController/SetExternalAI',
-        request_serializer=robot__controller__pb2.ExternalAIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalAIO.FromString,
+        request_serializer=robot__controller__pb2.ExternalPin.SerializeToString,
+        response_deserializer=robot__controller__pb2.ExternalAnalog.FromString,
         )
     self.GetExternalAI = channel.unary_unary(
         '/robotc.RobotController/GetExternalAI',
-        request_serializer=robot__controller__pb2.ExternalAIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalAIO.FromString,
+        request_serializer=robot__controller__pb2.ExternalPin.SerializeToString,
+        response_deserializer=robot__controller__pb2.ExternalAnalog.FromString,
         )
-    self.GetExternalAIs = channel.unary_unary(
-        '/robotc.RobotController/GetExternalAIs',
-        request_serializer=robot__controller__pb2.ExternalAIO.SerializeToString,
-        response_deserializer=robot__controller__pb2.ExternalAIOs.FromString,
-        )
-    self.GetExternalIOs = channel.unary_stream(
+    self.GetExternalIOs = channel.unary_unary(
         '/robotc.RobotController/GetExternalIOs',
         request_serializer=robot__controller__pb2.ExternalDevice.SerializeToString,
         response_deserializer=robot__controller__pb2.ExternalIOs.FromString,
@@ -1192,30 +1162,9 @@ class RobotControllerServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetExternalDOs(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def SetExternalDI(self, request, context):
+  def GetExternalDI(self, request, context):
     """外置数字输入
     """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def GetExternalDI(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def GetExternalDIs(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
@@ -1234,30 +1183,9 @@ class RobotControllerServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetExternalAOs(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def SetExternalAI(self, request, context):
+  def GetExternalAI(self, request, context):
     """外置模拟输入
     """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def GetExternalAI(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def GetExternalAIs(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
@@ -1724,65 +1652,35 @@ def add_RobotControllerServicer_to_server(servicer, server):
       ),
       'SetExternalDO': grpc.unary_unary_rpc_method_handler(
           servicer.SetExternalDO,
-          request_deserializer=robot__controller__pb2.ExternalDIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalDIO.SerializeToString,
+          request_deserializer=robot__controller__pb2.ExternalDigital.FromString,
+          response_serializer=messages__pb2.Response.SerializeToString,
       ),
       'GetExternalDO': grpc.unary_unary_rpc_method_handler(
           servicer.GetExternalDO,
-          request_deserializer=robot__controller__pb2.ExternalDIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalDIO.SerializeToString,
-      ),
-      'GetExternalDOs': grpc.unary_unary_rpc_method_handler(
-          servicer.GetExternalDOs,
-          request_deserializer=robot__controller__pb2.ExternalDIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalDIOs.SerializeToString,
-      ),
-      'SetExternalDI': grpc.unary_unary_rpc_method_handler(
-          servicer.SetExternalDI,
-          request_deserializer=robot__controller__pb2.ExternalDIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalDIO.SerializeToString,
+          request_deserializer=robot__controller__pb2.ExternalPin.FromString,
+          response_serializer=robot__controller__pb2.ExternalDigital.SerializeToString,
       ),
       'GetExternalDI': grpc.unary_unary_rpc_method_handler(
           servicer.GetExternalDI,
-          request_deserializer=robot__controller__pb2.ExternalDIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalDIO.SerializeToString,
-      ),
-      'GetExternalDIs': grpc.unary_unary_rpc_method_handler(
-          servicer.GetExternalDIs,
-          request_deserializer=robot__controller__pb2.ExternalDIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalDIOs.SerializeToString,
+          request_deserializer=robot__controller__pb2.ExternalPin.FromString,
+          response_serializer=robot__controller__pb2.ExternalDigital.SerializeToString,
       ),
       'SetExternalAO': grpc.unary_unary_rpc_method_handler(
           servicer.SetExternalAO,
-          request_deserializer=robot__controller__pb2.ExternalAIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalAIO.SerializeToString,
+          request_deserializer=robot__controller__pb2.ExternalAnalog.FromString,
+          response_serializer=messages__pb2.Response.SerializeToString,
       ),
       'GetExternalAO': grpc.unary_unary_rpc_method_handler(
           servicer.GetExternalAO,
-          request_deserializer=robot__controller__pb2.ExternalAIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalAIO.SerializeToString,
-      ),
-      'GetExternalAOs': grpc.unary_unary_rpc_method_handler(
-          servicer.GetExternalAOs,
-          request_deserializer=robot__controller__pb2.ExternalAIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalAIOs.SerializeToString,
-      ),
-      'SetExternalAI': grpc.unary_unary_rpc_method_handler(
-          servicer.SetExternalAI,
-          request_deserializer=robot__controller__pb2.ExternalAIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalAIO.SerializeToString,
+          request_deserializer=robot__controller__pb2.ExternalPin.FromString,
+          response_serializer=robot__controller__pb2.ExternalAnalog.SerializeToString,
       ),
       'GetExternalAI': grpc.unary_unary_rpc_method_handler(
           servicer.GetExternalAI,
-          request_deserializer=robot__controller__pb2.ExternalAIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalAIO.SerializeToString,
+          request_deserializer=robot__controller__pb2.ExternalPin.FromString,
+          response_serializer=robot__controller__pb2.ExternalAnalog.SerializeToString,
       ),
-      'GetExternalAIs': grpc.unary_unary_rpc_method_handler(
-          servicer.GetExternalAIs,
-          request_deserializer=robot__controller__pb2.ExternalAIO.FromString,
-          response_serializer=robot__controller__pb2.ExternalAIOs.SerializeToString,
-      ),
-      'GetExternalIOs': grpc.unary_stream_rpc_method_handler(
+      'GetExternalIOs': grpc.unary_unary_rpc_method_handler(
           servicer.GetExternalIOs,
           request_deserializer=robot__controller__pb2.ExternalDevice.FromString,
           response_serializer=robot__controller__pb2.ExternalIOs.SerializeToString,
