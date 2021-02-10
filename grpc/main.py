@@ -16,6 +16,16 @@ def print_io(io_type, ios):
     for io in ios:
         print('{0}, pin: {1}, value: {2}'.format(io_type, io.pin, io.value))
 
+def format_io_list(ios):
+    io_list = []
+    for io in ios:
+        io_list.append({
+            'id':io.id,
+            'pin':io.pin,
+            'value':io.value
+        })
+    return io_list
+
 def get_robot_ios():
     global rcs
     print('read robot ios')
@@ -38,12 +48,18 @@ def get_robot_ios():
 def get_external_ios():
     global rcs
     print('get external ios')
+    ios = {}
     try:
         res = rcs.GetExternalIOs(rcs_pb2.ExternalDevice(id=10001))
-        print_io('dis', res.dis)
-        print_io('dos', res.dos)
-        print_io('ais', res.ais)
-        print_io('aos', res.aos)
+        ios['dis'] = format_io_list(res.dis)
+        ios['dos'] = format_io_list(res.dos)
+        ios['ais'] = format_io_list(res.ais)
+        ios['aos'] = format_io_list(res.aos)
+        # print_io('dis', res.dis)
+        # print_io('dos', res.dos)
+        # print_io('ais', res.ais)
+        # print_io('aos', res.aos)
+        print(ios)
 
         sleep(1)
         t = Thread(target=get_external_ios)
@@ -58,10 +74,14 @@ def get_external_ios():
 def run():
     global rcs
     print('create channel')
-    channel = grpc.insecure_channel('192.168.1.5:5181')
+    channel = grpc.insecure_channel('192.168.3.227:5181')
     rcs = rcs_pb2_grpc.RobotControllerStub(channel)
     print('send request')
     # res = rcs.GetJointTemp(rcs_pb2.IntRequest(index=1))
+    rcs.SetVelocityFactor(rcs_pb2.Factor(value=70))
+    res = rcs.GetVelocityFactor(Empty())
+    print(res)
+    # rcs.SetPayload()
     # print(res.degree)
     
     # res = rcs.GetGravity(Empty())
@@ -71,8 +91,8 @@ def run():
     # t = Thread(target=get_robot_ios)
     # t.start()
 
-    t = Thread(target=get_external_ios)
-    t.start()
+    # t = Thread(target=get_external_ios)
+    # t.start()
     
         
     print('end')
